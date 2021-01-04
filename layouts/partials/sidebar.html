@@ -25,7 +25,7 @@
       {{- $recent := default 8 $s.numberOfRecentPosts }}
       {{- range first $recent $posts }}
       <li>
-        <a href="{{ .Permalink }}" class="nav-link">{{ .Title }}</a>
+        <a href="{{ .Permalink }}" class="nav-link">{{ .Date.Format "01/02" }} {{ .Title }}</a>
       </li>
       {{- end }}
     </ul>
